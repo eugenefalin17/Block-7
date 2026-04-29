@@ -1,0 +1,29 @@
+@mixin xlmobile {
+  @media (min-width: 360px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin mouse-in-use() {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin touch-in-use() {
+  @media (hover: none) {
+    @content;
+  }
+}
