@@ -1,0 +1,70 @@
+@use '../abstracts/var';
+@use '../abstracts/mix';
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'TT Lakes', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-color: var.$color-bg;
+  line-height: 24px;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+
+  min-width: 320px;
+  height: 100%;
+  overflow-x: hidden;
+  @include mix.tablet {
+    min-width: 768px;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  transition: all 0.4s;
+  font-family: 'TT Lakes', sans-serif;
+  color: inherit;
+  font-weight: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  position: relative;
+}
+
+input,
+textarea,
+select {
+  font-family: 'TT Lakes', sans-serif;
+  font-weight: inherit;
+}
