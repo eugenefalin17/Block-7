@@ -27,9 +27,14 @@
     box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
   }
 
+  @include mix.laptop {
+    width: 260px;
+  }
+
   @include mix.desktop {
+    flex-shrink: 0;
     left: 0;
-    position: fixed;
+    position: static;
     z-index: auto;
     box-shadow: none;
   }

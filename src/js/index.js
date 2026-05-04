@@ -247,3 +247,13 @@ for (let i = 0; i < pricesDots.length; i++) {
     })
   })
 }
+
+document.addEventListener('keydown', function (event) {
+  if (event.key !== 'Escape') return
+  if (
+    modalFeedback.classList.contains('modal__feedback--open') ||
+    modalCall.classList.contains('modal__call--open')
+  ) {
+    closeModal()
+  }
+})

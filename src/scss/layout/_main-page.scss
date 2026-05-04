@@ -4,8 +4,8 @@
 .container {
   @include mix.desktop {
     max-width: 1120px;
-    left: 320px;
     margin: 0;
+    flex: 1;
   }
 }
 
@@ -33,6 +33,10 @@
   @include mix.tablet {
     padding-left: 24px;
     padding-bottom: 8px;
+  }
+
+  @include mix.laptop {
+    padding-left: 16px;
   }
   @include mix.desktop {
     padding-left: 34px;
@@ -88,8 +92,12 @@ display: none;
   @include mix.tablet {
     padding-left: 24px;
   }
+
+  @include mix.laptop {
+    padding-left: 16px;
+  }
   @include mix.desktop {
-    width: 1064px;
+    width: 100%;
     flex-wrap: wrap;
     padding-left: 34px;
   }
@@ -137,6 +145,11 @@ display: none;
     height: 160px;
     line-height: 20px;
   }
+
+  @include mix.laptop {
+    max-width: 400px;
+  }
+
   @include mix.desktop {
     max-width: 490px;
     margin-left: 10px;
@@ -174,6 +187,10 @@ display: none;
 
 /*чтобы block__left и img стали рядом*/
 .block__content {
+  @include mix.laptop {
+    gap: 24px;
+  }
+
   @include mix.tablet {
     display: flex;
     padding: 32px 24px;
@@ -188,6 +205,11 @@ display: none;
 
 /*определяем размеры блока с картинкой*/
 .block__image {
+  @include mix.laptop {
+    width: 430px;
+    height: auto;
+  }
+
   @include mix.tablet {
     width: 360px;
     height: 208px;
